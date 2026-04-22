@@ -6,6 +6,11 @@ namespace StudentResultApp
     {
         public static void Main(string[] args)
         {
+            Console.WriteLine("SECTION: A");
+            // Question 1:
+
+            Console.Write("Question 1:\n\n");
+
             double[] marks = new double[3];
             double markTotal = 0;
 
@@ -55,6 +60,57 @@ namespace StudentResultApp
                 Result          : {result}
                 Result issued at: {DateTime.Now:f}
                 """);
+
+
+
+            // Question 2:
+
+            Console.WriteLine("\n");
+            Console.Write("Question 2:\n\n");
+
+            Console.WriteLine("===== CTU SIMPLE ATM SYSTEM =====\n");
+
+            Console.WriteLine("Hi, What is your name? ");
+            string userName = Console.ReadLine();
+            Console.WriteLine($"\nWelcome {userName}");
+
+
+            Console.Write("Enter account balance: ");
+            double accountBalance;
+            while (!double.TryParse(Console.ReadLine(), out accountBalance))
+            {
+                Console.WriteLine("Invalid input! Please enter a numeric value.");
+            }
+
+            Console.Write("\nEnter amount to withdraw: ");
+            double withdrawalAmount;
+            while (!double.TryParse(Console.ReadLine(), out withdrawalAmount))
+            {
+                Console.WriteLine("Invalid input! Please enter a numeric value.");
+            }
+
+
+            if (withdrawalAmount > accountBalance)
+            {
+                Console.WriteLine("\nInsufficient funds! Transaction failed.");
+            }
+            else
+            {
+                accountBalance -= withdrawalAmount;
+                Console.WriteLine("\n");
+                Console.WriteLine($"""
+                    Withdrawal successful!
+                    Updated balance: {accountBalance:C}
+                    Transaction Time: {DateTime.Now:f}
+                    """);
+            }
+
+
+
+            Console.WriteLine("SECTION :B");
+
+            // Question 1:
+             Console.Write("Question 1:\n\n");
         }
     }
 }
