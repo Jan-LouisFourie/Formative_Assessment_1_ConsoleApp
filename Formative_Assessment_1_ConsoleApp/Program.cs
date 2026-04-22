@@ -11,9 +11,9 @@ namespace StudentResultApp
 
             Console.Write("""
 
-                =====================
-                STUDENT GRADING APP
-                =====================
+                ====================================
+                        STUDENT GRADING APP
+                ====================================
                 
                 """);
 
@@ -45,9 +45,9 @@ namespace StudentResultApp
 
             Console.WriteLine("\n");
             Console.WriteLine($"""
-                =====================
-                       Results
-                =====================
+                ====================================
+                               Results
+                ====================================
 
                 Student Name    : {studentName}
                 Total Marks     : {markTotal}
